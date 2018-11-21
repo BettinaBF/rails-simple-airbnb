@@ -1,0 +1,44 @@
+<%= render "navbar" %>
+
+<div class= "container">
+  <div class="row">
+    <div class="col-12">
+      <h2>All Our Flats</h2>
+    </div>
+  </div>
+  <div class="row"></div>
+    <div class="col-12">
+      <p>You searched for. We found 4 on our website</p>
+    </div>
+  <div class="row">
+    <%@flats.each do |flat|%>
+    <div class="row-3">
+      <div class="flat-card">
+        <div class="flat-image">
+        </div>
+        <div class="flat-content">
+          <div class="flat-title">
+            <h4><%=flat.name%></h4>
+          </div>
+            <p><%= flat.address%></p>
+          <div class="flex">
+            <div class="flex">
+              <i class="fas fa-user-friends"></i>
+              <span><%= flat.number_of_guests%></span>
+            </div>
+            <div class="flex">
+              <i class="fas fa-euro-sign"></i>
+              <span><%= flat.price_per_night %></span>
+            </div>
+          </div>
+        </div>
+        <div class="flat-action">
+          <%= link_to "More Info", flat_path(flat) %>
+          <%= link_to "Edit", edit_flat_path(flat) %>
+          <%= link_to 'Remove', flat_path(flat), method: :delete%>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

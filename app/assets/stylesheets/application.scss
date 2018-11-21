@@ -1,0 +1,96 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS partials
+@import "layouts/index";
+@import "components/index";
+@import "pages/index";
+
+body{
+  display: block;
+}
+
+.row {
+  display: flex;
+}
+
+.flat-image {
+  background-image: url('https://source.unsplash.com/WLUHO9A_xik/350x180');
+  min-width: 350px;
+  min-height: 180px;
+}
+
+.row {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.row-3{
+  margin:10px;
+}
+
+.flat-content{
+  display: block;
+}
+
+.map{
+  background-image: url('https://source.unsplash.com/WLUHO9A_xik/w=1200');
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+}
+
+.margin-top-negative {
+  margin-top: -75px;
+}
+
+div{
+  display: block;
+ }
+
+// .details-row{
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin-right: -15px;
+//   margin-left: -15px;
+// }
+
+
+// .details-container{
+//   margin-right: auto;
+//   margin-left: auto;
+//   padding-right: 15px;
+//   padding-left: 15px;
+//   width: 100%;
+// }
+
+.col-8{
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+}
+
+.col-4{
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  display: block;
+}
+
+.flat-show-card{
+  box-sizing: border-box;
+  background: #F8F9FA;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  border-radius: 3px;
+}
